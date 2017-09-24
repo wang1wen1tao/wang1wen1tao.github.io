@@ -2,7 +2,7 @@
 int main()
 {
   int day;int x = 1;     //定义天数 day；桃子数量下; 
-  for(int day = 10;day > 0;day--)  //遍历1~10内桃子的个数 
+  for(day = 10;day > 0;day--)  //遍历1~10内桃子的个数 
   {
     x = 2*x+2;	
   }
