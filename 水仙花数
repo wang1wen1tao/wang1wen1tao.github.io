@@ -1,0 +1,15 @@
+#include "stdio.h"
+int main()
+{
+  int num,ge,shi,bai;        //定义变量 num; 各位 十位 百位; 
+   for(num = 100;num<1000;num++)    //遍历 100~ 1000 的数字 
+    {
+    ge = num % 10;                 // 123 % 10 = 3; 
+    shi = num / 10 % 10;           // 123 / 10 % 10 = 2;
+    bai = num / 100;               // 123 / 10 = 1;
+    if(ge * ge* ge +shi * shi *shi +bai * bai * bai==ge + 10 *shi +100 *bai)  //判断条件是否成立 
+	{
+      printf("%d\n",num);          //输出结果 
+	}
+	}
+  return 0;
