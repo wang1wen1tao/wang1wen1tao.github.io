@@ -1,0 +1,36 @@
+#include "stdio.h"
+#include "string.h"
+//定义全局变量存放数据
+char s[100],s2[100];
+int a[100],b[100],c[100];
+void main()
+{
+    int i,x,len_c;
+    printf("输入加数与被加数\n");
+    gets(s);  //输入加数与被加数
+    gets(s2);
+    //清空数组a,b,c;
+    memset(a,0,sizeof(a));
+    memset(b,0,sizeof(b));
+    memset(c,0,sizeof(c));
+    //获取数组s,s2,的长度;
+    int len_a = strlen(s),len_b = strlen(s2);
+    //把加数存放在 a数组中
+    for(i = 0;i <= len_a - 1 ;i++)
+    {a[len_a-i] = s[i] - 48;}
+    for(i = 0;i <= len_b - 1;i++)
+    {b[len_b-i] = s2[i] - 48;}
+    len_c = 1;
+    x = 0;
+    while(len_c <= len_a ||len_c <= len_b)
+    {
+        c[len_c] = a[len_c] + b[len_c] + x; //两数相加
+        x = c[len_c] / 10;          //进位
+        c[len_c] = c[len_c] % 10;        //进位后的数
+        len_c++;
+    }
+    c[len_c] = x;
+    if(c[len_c] == 0)  {len_c--;}    //最高位进位;
+    for(i = len_c;i >=1;i--)
+    {printf("%d",c[i]);}
+}
