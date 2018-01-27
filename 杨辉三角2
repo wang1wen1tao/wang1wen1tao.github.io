@@ -1,0 +1,31 @@
+#include<stdio.h>  
+main()  
+{  
+    int n,x,y,a[35][35]={0};  
+    int i,j;  
+    scanf("%d",&n);  
+    if(n>=1&&n<=34)  
+    //赋值对角线元素为1   
+    {  
+        for(x=1;x<=n;x++)  
+        {  
+            a[x][1]=1;  
+            a[x][x]=1;  
+        }  
+        //赋值其他元素   
+        for(x=3;x<=n;x++)  
+        for(y=2;y<=n;y++)  
+        a[x][y]=a[x-1][y]+a[x-1][y-1];  
+        //输出对应元素   
+        for(j=1,x=1;x<=n;x++)  
+        {  
+            for(y=1;y<=j;y++)  
+            {  
+                printf("%d ",a[x][y]);  
+            }  
+            j++;  
+            printf("\n");  
+        }  
+    }  
+    return 0;  
+}  
