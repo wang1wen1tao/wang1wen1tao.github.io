@@ -1,0 +1,33 @@
+/*
+有n盏灯编号1~n，第一个人把所有灯打开，后边的人按照编号的倍数关灯，输出开灯的编号。
+*/
+#include "stdio.h"
+#include "string.h"
+#define Max 1000+10
+int a[Max];
+void mian()
+{
+    int i,j,n,k,f = 1;
+    memset(a,0,sizeof(a));
+    scanf("%d %d",&n,&k);
+    for(i = 1;i <= k;i++)
+    {
+        for(j = 1;j <= n;n++)
+        {
+            if(j % i == 0)
+            a[j] != a[j];
+        }
+    }
+    for(i = 1;i <= n;i++)
+    {
+        if(a[i])
+        {
+            if(f)
+            f = 0;
+            else
+            printf(" ");
+            printf("%d",a[i]);
+            printf("\n");
+        }
+    }
+}
