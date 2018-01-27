@@ -1,0 +1,29 @@
+#include "stdio.h"
+int main()
+{
+	int i,j,m,n,s,a,b,num;
+	scanf("%d\n",&n);
+	for(num = 10000;num <= 999999;num++){
+		if(num < 99999){
+			i = num % 10;
+			j = num  / 10 % 10;
+			m = num / 100 % 10;
+			s = num / 1000 % 10;
+			a = num / 10000;
+			if(i == a && j == s && n == i + j + m + s + a){
+				printf("%d\n",num);
+			}
+		}else{
+		    i = num % 10;
+			j = num  / 10 % 10;
+			m = num / 100 % 10;
+			s = num / 1000 % 10;
+			a = num / 10000 % 10;
+			b = num / 100000;
+			if(i == b && j == a && m == s && n == i + j + m + s + a +b ){
+				printf("%d\n",num);
+			}
+		}
+	}
+	return 0;
+}
