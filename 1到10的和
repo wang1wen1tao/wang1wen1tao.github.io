@@ -1,0 +1,9 @@
+#include <stdio.h>  
+int main()  
+{  
+   long long n,s = 0;
+   scanf("%I64d",&n);
+   s=(1+n)*n/2;
+   printf("%I64d",s);
+   return 0;
+}  
