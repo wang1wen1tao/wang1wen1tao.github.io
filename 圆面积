@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	const double PI = atan(1.0)*4;
+	int  r;
+    scanf("%d",&r);
+    printf("%.7f",r*r*PI);
+    return 0;
+}
+ 
